@@ -4,4 +4,4 @@ RANDOM_START = 0
 RANDOM_END = 100
 PICKLE_FILE_INITIAL_VALUES = "data\\user_dictionary.pickle"
 NUMBER_OF_WEEKS_AVERAGE = 4
-PICKLE_FILE_MEAN_VALUES = "data\\mean_values_of_users"
+PICKLE_FILE_MEAN_VALUES_FOLDER = "data\\mean"

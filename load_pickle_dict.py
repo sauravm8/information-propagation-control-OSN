@@ -3,6 +3,7 @@
 import config
 import logging
 import pickle
+import os
 
 #Finding the mean from a list of values in the list
 def find_mean(list_of_values, number_of_weeks):
@@ -43,8 +44,8 @@ if __name__ == '__main__':
         list_of_average_values.append(average_value_list)
 
     logging.info(sorted(list_of_average_values, reverse=True))
-
+    list_of_files = len(os.listdir(config.PICKLE_FILE_MEAN_VALUES_FOLDER))
     # Saving them in a pickle file. After this, another code will read the pickle file and plot the graphs.
-    with open(config.PICKLE_FILE_MEAN_VALUES, 'wb') as pickle_file:
+    with open(os.path.join(config.PICKLE_FILE_MEAN_VALUES_FOLDER,("count_{}_average_{}.pickle".format(list_of_files, config.NUMBER_OF_WEEKS_AVERAGE))), 'wb') as pickle_file:
         pickle.dump(list_of_average_values, pickle_file, protocol=pickle.HIGHEST_PROTOCOL)
-    logging.info("List of mean values saved in pickle file {}".format(config.PICKLE_FILE_MEAN_VALUES))
+    logging.info("List of mean values saved in pickle file {}".format(config.PICKLE_FILE_MEAN_VALUES_FOLDER))
