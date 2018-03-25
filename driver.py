@@ -38,9 +38,9 @@ if __name__ == '__main__':
 
     logging.info("Values for {} weeks have been generated".format(config.NUMBER_OF_WEEKS))
 
-    with open(config.PICKLE_FILE, 'wb') as pickle_file:
+    with open(config.PICKLE_FILE_INITIAL_VALUES, 'wb') as pickle_file:
         pickle.dump(user_dictionary, pickle_file, protocol=pickle.HIGHEST_PROTOCOL)
-    logging.info("Dictionary saved as pickle file {}".format(config.PICKLE_FILE))
+    logging.info("Dictionary saved as pickle file {}".format(config.PICKLE_FILE_INITIAL_VALUES))
 
 
 
