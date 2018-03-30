@@ -1,9 +1,9 @@
 NUMBER_OF_WEEKS = 52
 NUMBER_OF_USERS = 4029
 RANDOM_START = 0
-RANDOM_END = 100
+RANDOM_END = 150
 PICKLE_FILE_INITIAL_VALUES = "data\\user_dictionary.pickle"
-NUMBER_OF_WEEKS_AVERAGE = 52
+NUMBER_OF_WEEKS_AVERAGE = 4
 PICKLE_FILE_MEAN_VALUES_FOLDER = "data\\mean"
-FILE_TO_PLOT = "data\\mean\\count_1_average_52.pickle"
+FILE_TO_PLOT = "data\\mean\\count_4_average_4.pickle"
 PLOT_SAVE_DIRECTORY = "data\\plots"
