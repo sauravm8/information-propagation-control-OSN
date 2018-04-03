@@ -1,4 +1,3 @@
-import numpy as np
 import config
 import logging
 import os
@@ -9,7 +8,12 @@ import pickle
 def plotting_data(data_points, iter_number, number_of_buckets, number_of_users, plotting_directory):
     x = range(number_of_users)
     plt.plot(x, data_points)
-    plt.savefig(os.path.join(plotting_directory,"plot_iter{}_of_{}".format(str(iter_number), str(number_of_buckets))))
+    plt.xlabel("Users")
+    plt.ylabel("Activity")
+    plt.title("Graph of User vs Activity \n {} of {}".format(str(iter_number + 1),
+                                                             str(int(config.NUMBER_OF_WEEKS / number_of_buckets))))
+    plt.savefig(os.path.join(plotting_directory,"plot_iter{}_of_{}".format(str(iter_number+1), str(number_of_buckets))))
+
     plt.show()
 
 if __name__ == '__main__':
